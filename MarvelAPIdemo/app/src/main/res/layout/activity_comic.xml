@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ComicActivity"
+    android:id="@+id/comicContainer">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/comicAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/windowBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backButtonComic"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marvel Comics"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/backButtonComic"
+                android:layout_marginLeft="25dp"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:id="@+id/shareComic"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_black"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/comicAppBar">
+
+        <ImageView
+            android:id="@+id/comicImage"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/comicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comic Title"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/comicImage"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_toEndOf="@id/comicImage"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/comicTitle"/>
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/comicImage"/>
+
+        <TextView
+            android:id="@+id/comicSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary goes here"
+            android:padding="5dp"
+            android:layout_below="@+id/summary"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
